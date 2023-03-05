@@ -14,16 +14,16 @@ regs            db 'AL','CL','DL','BL','AH','CH','DH','BH'
 addr2tab        db 'SI','DI','BP','BX'
 addr5tab        db 'BX+SI','BX+DI','BP+SI','BP+DI'
 
-usage   db 'Usage: 1_2 input_file',10,13
+usage   db 'Usage: 1_2 input_file',13,10
 usage_len = $-usage
 
-badop   db 'Unsupported opcode',10,13
+badop   db 'Unsupported opcode',13,10
 badop_len = $-badop
 
-badmod  db 'Unsupported Mod field in ModR/M byte',10,13
+badmod  db 'Unsupported Mod field in ModR/M byte',13,10
 badmod_len = $-badmod
 
-badeof  db 'Unexpected end of input',10,13
+badeof  db 'Unexpected end of input',13,10
 badeof_len = $-badeof
 
 ;; emit 'MOV '
