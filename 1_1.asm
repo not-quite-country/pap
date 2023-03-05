@@ -150,8 +150,8 @@ section '.text' code readable executable
 
   err_last:
     invoke  GetLastError
-    invoke  FormatMessage,$1100,eax,0,temp,0,0
-    lea     ebx,[rax*2]
+    invoke  FormatMessage,$1100,0,eax,0,temp,0,0
+    mov     ebx,eax
     mov     rax,[temp]
   err_msg:
     invoke  WriteFile,r13d,rax,ebx,temp,0
@@ -196,7 +196,7 @@ section '.idata' import data readable writeable
           CreateFile,'CreateFileW',\
           CreateFileMapping,'CreateFileMappingA',\
           ExitProcess,'ExitProcess',\
-          FormatMessage,'FormatMessageW',\
+          FormatMessage,'FormatMessageA',\
           GetCommandLine,'GetCommandLineW',\
           GetFileSizeEx,'GetFileSizeEx',\
           GetLastError,'GetLastError',\
