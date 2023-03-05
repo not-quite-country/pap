@@ -14,7 +14,7 @@ regs            db 'AL','CL','DL','BL','AH','CH','DH','BH'
 addr2tab        db 'SI','DI','BP','BX'
 addr5tab        db 'BX+SI','BX+DI','BP+SI','BP+DI'
 
-usage   db 'Usage: 1_1 input_file',10,13
+usage   db 'Usage: 1_2 input_file',10,13
 usage_len = $-usage
 
 badop   db 'Unsupported opcode',10,13
