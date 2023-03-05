@@ -15,8 +15,6 @@ section '.text' code readable executable
 
   regoff  db 0,16,0,16
 
-  movstr  db 'MOV '
-
   usage   db 'Usage: 1_1 input_file',10,13
   usage_len = $-usage
 
