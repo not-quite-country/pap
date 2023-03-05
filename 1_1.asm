@@ -15,16 +15,16 @@ section '.text' code readable executable
 
   regoff  db 0,16,0,16
 
-  usage   db 'Usage: 1_1 input_file',10,13
+  usage   db 'Usage: 1_1 input_file',13,10
   usage_len = $-usage
 
-  badop   db 'Unsupported opcode',10,13
+  badop   db 'Unsupported opcode',13,10
   badop_len = $-badop
 
-  badmod  db 'Unsupported Mod field in ModR/M byte',10,13
+  badmod  db 'Unsupported Mod field in ModR/M byte',13,10
   badmod_len = $-badmod
 
-  badeof  db 'Unexpected end of input',10,13
+  badeof  db 'Unexpected end of input',13,10
   badeof_len = $-badeof
 
   align 16
