@@ -145,9 +145,9 @@ optab    dq mr8,mr16,rm8,rm16,ai8,ai16,opq,opq                  ; 00 - 07
          dq 8 dup opq                                           ; D0 - D7
          dq 8 dup opq                                           ; D8 - DF
          dq 4 dup _loop,4 dup opq                               ; E0 - E7
-         dq 8 dup opq
-         dq 8 dup opq
-         dq 8 dup opq
+         dq 8 dup opq                                           ; E8 - EF
+         dq 8 dup opq                                           ; F0 - F7
+         dq 8 dup opq                                           ; F8 - FF
 
 ;; ModR/M MOD field dispatch
 modtab  dq mod00,mod01,mod10,mod11
